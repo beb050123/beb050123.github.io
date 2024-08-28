@@ -2,78 +2,89 @@ body {
     background-color: #333333;
     color: #f0f0f0;
     font-family: Arial, sans-serif;
-    padding-left: 16px; /* Increased padding to align with the golden ratio */
-    padding-top: 16px;
-}
-
-h1 {
-    margin-bottom: 16px; /* Increased margin to align with the golden ratio */
-}
-
-#title {
+    padding: 16px;
+  }
+  
+  h1 {
+    margin-bottom: 16px;
+  }
+  
+  #title {
     text-align: center;
-
-}
-
-.social-icons {
+  }
+  
+  .social-icons {
     display: flex;
     justify-content: center;
-    gap: 48px; /* Adjusted to be closer to a multiple of the golden ratio */
-    margin-bottom: 32px; /* Adjusted to align with the golden ratio */
-}
-
-.social-icons a img {
-    width: 31px; /* Adjusted to a number closer to the golden ratio */
+    gap: 48px;
+    margin-bottom: 32px;
+  }
+  
+  .social-icons a img {
+    width: 31px;
     height: 31px;
     color: #f0f0f0af;
-}
-
-.project-cards {
+  }
+  
+  .project-cards {
     display: flex;
-    gap: 24px;
     flex-wrap: wrap;
-    justify-content: start;
+    gap: 24px;
+    justify-content: center;
     margin-top: 32px;
-}
-
-.card {
+  }
+  
+  .card {
     background-color: #444444;
     border-radius: 12px;
     padding: 16px;
-    width: 500px;
+    width: calc(33.333% - 16px);
+    min-width: 280px;
+    max-width: 400px;
     color: #f0f0f0;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
+    flex-grow: 1;
+  }
+  
+  .card img {
     width: 100%;
-    height: 250px; /* Set a fixed height for all images */
-    object-fit: cover; /* Ensures the image covers the entire area while maintaining aspect ratio */
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
     margin-bottom: 12px;
-}
-
-.card h3 {
+  }
+  
+  .card h3 {
     margin-bottom: 8px;
     font-size: 1.2em;
-}
-
-.card p {
+  }
+  
+  .card p {
     font-size: 0.9em;
-}
-
-.card:hover {
+  }
+  
+  .card:hover {
     background-color: #555555;
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.about-me {
+  }
+  
+  .about-me {
     border-radius: 12px;
     margin-bottom: 80px;
     color: #f0f0f0;
-}
-
-
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: calc(50% - 12px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      width: 100%;
+    }
+  }
